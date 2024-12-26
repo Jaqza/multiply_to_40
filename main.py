@@ -7,7 +7,6 @@ UPPER_RANGE = 10
 num_1 = None
 num_2 = None
 
-
 def label_clear():
     entry.delete(0, END)
     entry.focus()
@@ -26,7 +25,7 @@ def randoms():
 def result_check():
     result = int(num_1) * int(num_2)
     if entry.get() == str(result):
-        canvas.itemconfig(congratulation_display, text="Brawo")
+        canvas.itemconfig(congratulation_display, text="Brawo", fill= GREEN)
         canvas.itemconfig(feedback, text=f"{num_1} * {num_2} = {result}" ,fill = GREEN)
         label_clear()
         window.after(3000, canvas_clear)
